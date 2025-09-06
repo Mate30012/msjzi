@@ -3,86 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MAJSZI Vape Shop</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>MAJSZI - Slukkbolt</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      background-color: #f8f9fa;
+      background: #f8f9fa;
     }
-    header {
-      background-color: #343a40;
-      color: white;
-      padding: 80px 20px;
-      text-align: center;
+    .product-card img {
+      max-height: 200px;
+      object-fit: contain;
     }
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1.25rem;
-    }
-    section {
-      padding: 60px 20px;
-    }
-    footer {
-      background-color: #343a40;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-    .product-card {
-      max-width: 400px;
-      margin: auto;
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #8a2be2;
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- Fejléc -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">MAJSZI</a>
+      <span class="navbar-brand logo">MAJSZI</span>
+      <span class="navbar-text">A legmenőbb slukkok boltja (vagy valami ilyesmi)</span>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <header>
-    <h1>MAJSZI Vape Shop</h1>
-    <p>Minőségi, kontrollált és felelősségteljes vape élmények a legjobb technológiával.</p>
-  </header>
+  <!-- Termékek -->
+  <div class="container my-5">
+    <div class="row g-4">
 
-  <!-- Product Section -->
-  <section class="container text-center">
-    <h2 class="mb-5">Vásárolj Vape Slukkokat</h2>
-    <div class="card product-card shadow-sm p-4">
-      <img src="https://via.placeholder.com/350x200" class="card-img-top mb-3" alt="Vape Slukk">
-      <div class="card-body">
-        <h5 class="card-title">MAJSZI Vape Slukk</h5>
-        <p class="card-text">Élvezd a prémium minőségű vape slukkokat felelősségteljesen. Ez nem játék – komolyan vesszük a minőséget.</p>
-
-        <!-- Stripe Buy Button -->
-        <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-        <stripe-buy-button
-          buy-button-id="buy_btn_1S4KeUHGMrK8OH5sEQaOmY8d"
-          publishable-key="pk_live_51Q9TzwHGMrK8OH5sEwrTfVzRvnNe9YBn83ZksqFc4u3WaHq45lFcHXLVQMDSvwX3d75aI2j8is4HQclSHo8Df1X8007LlYMa4e"
-        >
-        </stripe-buy-button>
+      <!-- Zooy -->
+      <div class="col-md-4">
+        <div class="card product-card h-100">
+          <img src="images/zooy.png" class="card-img-top" alt="Zooy slukk">
+          <div class="card-body">
+            <h5 class="card-title">Zooy</h5>
+            <p class="card-text">A slukk, amitől még a galamb is leül. 800 pöff egyhuzamban.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <!-- About Section -->
-  <section class="bg-light text-center">
-    <div class="container">
-      <h2>Rólunk</h2>
-      <p class="lead">A MAJSZI csapata elkötelezett a prémium minőségű, biztonságos és felelősségteljes vape élmények mellett. Minden termékünket gondosan ellenőrzünk, hogy a vásárlók a lehető legjobb élményt kapják.</p>
-    </div>
-  </section>
+      <!-- Vapsolo -->
+      <div class="col-md-4">
+        <div class="card product-card h-100">
+          <img src="images/vapsolo.png" class="card-img-top" alt="Vapsolo slukk">
+          <div class="card-body">
+            <h5 class="card-title">Vapsolo</h5>
+            <p class="card-text">Egyedül fújod? Vapsolo a társad lesz! Mentolos karfiolíz.</p>
+          </div>
+        </div>
+      </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 MAJSZI. Minden jog fenntartva.</p>
+      <!-- Elfbar -->
+      <div class="col-md-4">
+        <div class="card product-card h-100">
+          <img src="images/elfbar.png" class="card-img-top" alt="Elfbar slukk">
+          <div class="card-body">
+            <h5 class="card-title">Elfbar</h5>
+            <p class="card-text">A klasszikus. Olyan retró, mint a Flinstone család.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Stripe gomb -->
+  <div class="container text-center my-5">
+    <h2>Vedd meg most!</h2>
+    <p>1 random slukk csak 999 Ft*</p>
+
+    <!-- Stripe Buy Button -->
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+    <stripe-buy-button
+      buy-button-id="buy_btn_1S4KeUHGMrK8OH5sEQaOmY8d"
+      publishable-key="pk_live_51Q9TzwHGMrK8OH5sEwrTfVzRvnNe9YBn83ZksqFc4u3WaHq45lFcHXLVQMDSvwX3d75aI2j8is4HQclSHo8Df1X8007LlYMa4e">
+    </stripe-buy-button>
+  </div>
+
+  <footer class="text-center text-muted py-4">
+    <small>*Ez az egész csak egy vicc. Ne szívj el semmit, amit nem tudsz kiejteni.</small>
   </footer>
 
 </body>
